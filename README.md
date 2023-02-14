@@ -2,12 +2,12 @@
 
 The following method was used in Weinschutz Mendes et al. (2023) to analyze whole-brain confocal z-stack images of 6 dpf larval zebrafish brains immunostained for active (pERK) and total (tERK) neurons. In Weinschutz Mendes et al. (2023), this method was used to identify brain volume and activity phenotypes in zebrafish mutants of autism genes. The method is described in the STAR Methods section of Weinschutz Mendes et al. (2023). 
 
-###Preprocessing and file conversion
+### Preprocessing and file conversion
 
 1. Convert z-stack microscopy images (e.g., .lif) to .nrrd files using ImageJ.
 2. Convert .nrrd files to .nii.gz files using BioImage Suite (https://bioimagesuiteweb.github.io/webapp/viewer.html).
 
-###Registration and analysis (BioImage Suite Web Node)
+### Registration and analysis (BioImage Suite Web Node)
 
 3. Register all .nii files using the nonlinearregistration module.
 4. Reslice tERK-labeled images to a standard zebrafish reference brain (Randlett et al. 2015) using the resliceImage module, which generates a transformation file (.bisxform) and a registered file (r_*).
