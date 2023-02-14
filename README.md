@@ -11,7 +11,7 @@ The following method was used in Weinschutz Mendes et al. (2023) to analyze whol
 
 3. Register all .nii files using the `nonlinearregistration` module of BioImage Suite Web Node, `biswebnode`.
 4. Reslice tERK-labeled images to a standard zebrafish reference brain (Randlett et al. 2015) using the `resliceImage` module, which generates a transformation file (`.bisxform`) and a registered file (`r_*.nii.gz`).
-5. For volume analysis, use the `jacobianimage` module, which generates jacobian files for each `.bisxform` file, and the `maskimage` module to generate masked versions of the `jacobian files` (`mask_ja*.nii.gz`).
+5. For volume analysis, use the `jacobianimage` module, which generates jacobian files for each `.bisxform` file, and the `maskimage` module to generate masked versions of the jacobian files (`mask_ja*.nii.gz`).
 6. For activity analysis, the `divided.sh` script is used to divide the registered `*C0*.nii.gz` (pERK) and `*C1*.nii.gz` (tERK) images, generating `*C0divC1*.nii.gz` files. This script requires FSLMaths (https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation). 
 7. To generate ROI values for activity (`*C0divC1*.nii.gz`) or volume (`mask_ja*.nii.gz`) files, use the computeroi module in biswebnode. This step requires using a zebrafish brain atlas (e.g., Randlett et al. 2015) for activity quantification and a resampled version of the zebrafish atlas for volume quantification.
 The script `zscore.sh` is used to calculate a zscore for both activity (`*C0divC1*.nii.gz`) and volume (`mask_ja*.nii.gz`) files by comparing experimental and control groups. This script requires MATLAB.
