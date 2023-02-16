@@ -20,4 +20,5 @@ The software package Analysis of Functional NeuroImages (AFNI) (Cox et al. 1996,
 
 Images processed by AFNI can be visualized using BioImage Suite WebApp Dual Viewer (https://bioimagesuiteweb.github.io/webapp/dualviewer.html#) and BioImage Suite Overlay Viewer (https://bioimagesuiteweb.github.io/webapp/overlayviewer.html#).
 
+[![DOI](https://zenodo.org/badge/601793544.svg)](https://zenodo.org/badge/latestdoi/601793544)
 
